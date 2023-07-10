@@ -2,7 +2,7 @@ import './App.css';
 import '../styles/result.scss';
 import { useEffect, useState } from 'react';
 
-export default function Result() {
+export default function App() {
   const [resultData, setResultData] = useState(null);
 
   useEffect(() => {

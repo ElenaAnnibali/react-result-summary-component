@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('../../fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+}
+
+$background-colors: #fff6f6, #fffbf4, #f2fcf9, #f3f4fd;
+
+$colors: #ff5555, #ffb21e, #00bb8f, #1125d6;
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: black;
+}
+
+.component-styles {
+  width: 375px;
+  height: 809px;
+  background-color: #fff;
+}
+
+// Styles for the top section
+.top-section {
+  width: 375px;
+  height: 356px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px 0px 32px 32px;
+  background: var(
+    --gradient-1,
+    linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+  );
+
+  /* 1 */
+  box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
+  color: #cac9ff;
+}
+
+.top-text {
+  margin-top: 24px;
+  color: #cac9ff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.oval {
+  margin-top: 24px;
+  background: var(
+    --gradient-2,
+    linear-gradient(
+      180deg,
+      #4d21c9 0%,
+      rgba(37, 33, 201, 0) 100%,
+      rgba(37, 33, 201, 0) 100%
+    )
+  );
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.result-top {
+  color: #fff;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0;
+}
+
+// Styles for the result element
+.result-bottom {
+  color: var(--light-blue, #cac9ff);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+.text-element-great {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-element-performance {
+  color: var(--light-blue, #cac9ff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: justify;
+  margin: 0 57px 0 58px;
+}
+
+// Styles for the bottom section
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 30px 0 30px;
+}
+
+.summary {
+  color: #303b59;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 2px;
+}
+
+.category-element {
+  width: 315px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+  border-radius: 12px;
+
+  // Apply dynamic background color based on index
+  @for $i from 1 through length($background-colors) {
+    &:nth-child(#{$i + 1}) {
+      background-color: nth($background-colors, $i);
+    }
+  }
+
+  @for $i from 1 through length($colors) {
+    &:nth-child(#{$i + 1}) {
+      color: nth($colors, $i);
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 17px 0 0 16px;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  // margin-left: -120px !important;
+  text-align: left !important;
+}
+
+.icon-name-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.category-score {
+  color: var(--dark-navy, #303b59);
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 16px;
+}
+
+.percentage {
+  opacity: 0.5;
+}
+
+// Styles for the continue button
+.continue-button {
+  cursor: pointer;
+  width: 315px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 128px;
+  background: var(--dark-navy, #303b59);
+  color: var(--white, #fff);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  &:hover {
+    background: var(
+      --gradient-1,
+      linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+    );
+  }
+}

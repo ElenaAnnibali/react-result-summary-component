@@ -7,7 +7,7 @@ export default function Result() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/resultData.json');
+        const response = await fetch('/public/resultData.json');
         const data = await response.json();
         setResultData(data);
       } catch (error) {

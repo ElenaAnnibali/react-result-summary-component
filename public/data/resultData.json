@@ -7,16 +7,16 @@
   {
     "category": "Memory",
     "score": 92,
-    "icon": "./src/assets/icon-memory.svg"
+    "icon": "/icon/icon-memory.svg"
   },
   {
     "category": "Verbal",
     "score": 61,
-    "icon": "./src/assets/icon-verbal.svg"
+    "icon": "/icon/icon-verbal.svg"
   },
   {
     "category": "Visual",
     "score": 72,
-    "icon": "./src/assets/icon-visual.svg"
+    "icon": "/icon/icon-visual.svg"
   }
 ]

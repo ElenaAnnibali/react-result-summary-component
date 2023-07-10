@@ -1,5 +1,5 @@
 import './App.css';
-import '../styles/result.scss';
+import './styles/result.scss';
 import { useEffect, useState } from 'react';
 
 export default function App() {

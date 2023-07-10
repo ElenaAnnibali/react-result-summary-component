@@ -71,7 +71,7 @@ body {
 .result-top {
   color: #fff;
   font-size: 56px;
-  font-style: normal;
+
   font-weight: 800;
   line-height: 72px;
   margin: 0;
@@ -81,7 +81,7 @@ body {
 .result-bottom {
   color: var(--light-blue, #cac9ff);
   font-size: 16px;
-  font-style: normal;
+
   font-weight: 700;
   margin: 0;
 }
@@ -90,7 +90,6 @@ body {
   color: #fff;
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
@@ -102,7 +101,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  text-align: justify;
+  text-align: center;
   margin: 0 57px 0 58px;
 }
 
@@ -201,5 +200,70 @@ body {
       --gradient-1,
       linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
     );
+  }
+}
+
+@media (min-width: 768px) {
+  .component-styles {
+    display: flex;
+    flex-direction: row;
+    width: 736px;
+    height: 512px;
+    flex-shrink: 0;
+    border-radius: 32px;
+  }
+
+  .top-section {
+    width: 368px;
+    height: 512px;
+    border-radius: 32px;
+    justify-content: space-around;
+  }
+
+  .top-text {
+    margin: 16px 0 16px 0;
+    font-size: 24px;
+  }
+
+  .oval {
+    width: 200px;
+    height: 200px;
+  }
+
+  .result-top {
+    font-size: 72px;
+  }
+
+  .result-bottom {
+    font-size: 18px;
+  }
+
+  .text-element-great {
+    font-size: 32px;
+  }
+
+  .text-element-performance {
+    font-size: 18px;
+    margin: 0 48px 24px 48px;
+  }
+
+  .bottom-section {
+    margin-left: 40px;
+  }
+
+  .summary {
+    font-size: 24px;
+    margin-top: 38px;
+  }
+
+  .category-element {
+    width: 288px;
+    height: 56px;
+  }
+
+  .continue-button {
+    width: 288px;
+    height: 56px;
+    margin-top: 27px;
   }
 }
